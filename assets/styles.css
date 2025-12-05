@@ -1,0 +1,67 @@
+/* Simple responsive stylesheet for Sunscream */
+
+:root{
+  --bg:#fff;
+  --muted:#666;
+  --accent:#f2a365;
+  --accent-2:#7dd3fc;
+  --container-max:1100px;
+  --radius:8px;
+  --gap:1.25rem;
+  font-size:16px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:#111;height:100%}
+.container{max-width:var(--container-max);margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:40}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{margin:0;font-size:1.25rem;letter-spacing:0.4px}
+.menu-toggle{display:none;background:none;border:0;font-size:1.4rem;cursor:pointer}
+
+/* Nav */
+.site-nav a{margin-left:1rem;text-decoration:none;color:var(--muted);font-weight:600}
+.site-nav a:hover{color:#000}
+
+/* Hero */
+.hero{padding:3.5rem 0;background:linear-gradient(180deg, #fff8f2, #fff);text-align:center}
+.hero h2{margin:0 0 .5rem;font-size:1.6rem}
+.hero p{margin:0 0 1rem;color:var(--muted)}
+
+/* Buttons */
+.btn{display:inline-block;padding:.6rem 1rem;background:var(--accent);color:#fff;border-radius:999px;text-decoration:none;font-weight:600;border:0;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+
+/* Products */
+.products h3{margin-top:1rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:1rem}
+.card{background:#fff;border:1px solid #f0f0f0;padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(10,10,10,0.03)}
+.card h4{margin:.75rem 0 .25rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card-media{border-radius:6px;overflow:hidden}
+
+/* About & Contact */
+.about, .contact{padding:1rem 0}
+.contact form{display:grid;gap:.6rem;max-width:520px}
+.contact label{display:flex;flex-direction:column;font-size:.95rem;color:var(--muted)}
+.contact input, .contact textarea{margin-top:.4rem;padding:.6rem;border:1px solid #e6e6e6;border-radius:6px;font-size:1rem}
+.form-status{margin-top:.5rem;font-size:.95rem;color:var(--muted)}
+
+/* Footer */
+.site-footer{padding:1rem 0;border-top:1px solid #f2f2f2;text-align:center;font-size:.95rem;color:var(--muted);margin-top:2rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .cards{grid-template-columns:1fr}
+  .site-nav{position:fixed;inset:auto 0 0 0;background:#fff;border-top:1px solid #eee;padding:1rem;transform:translateY(100%);transition:transform .24s ease;display:flex;flex-direction:column;gap:.4rem}
+  .site-nav.open{transform:translateY(0)}
+  .menu-toggle{display:block}
+  .site-header .container{align-items:center}
+}
