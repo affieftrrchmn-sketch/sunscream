@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sunscream — Produk Makanan</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Sunscream</h1>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav id="siteNav" class="site-nav">
+        <a href="#home">Beranda</a>
+        <a href="#products">Produk</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Sunscream — Nikmati Citarasa Alami</h2>
+        <p>Produk makanan rumahan berkualitas, dibuat dengan bahan pilihan dan rasa yang memanjakan lidah.</p>
+        <a class="btn" href="#products">Lihat Produk</a>
+      </div>
+    </section>
+
+    <section id="products" class="products container">
+      <h3>Produk Kami</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="card-media" aria-hidden>
+            <!-- simple SVG placeholder -->
+            <svg width="100%" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder image"><rect width="100%" height="100%" fill="#f2a365"></rect><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="18">Produk A</text></svg>
+          </div>
+          <h4>Produk A</h4>
+          <p>Rasa klasik favorit keluarga — cocok untuk camilan dan oleh-oleh.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-media" aria-hidden>
+            <svg width="100%" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder image"><rect width="100%" height="100%" fill="#7dd3fc"></rect><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#034" font-size="18">Produk B</text></svg>
+          </div>
+          <h4>Produk B</h4>
+          <p>Varian pedas dan gurih yang memberikan sensasi berbeda di setiap gigitan.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-media" aria-hidden>
+            <svg width="100%" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder image"><rect width="100%" height="100%" fill="#c7f9cc"></rect><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#052" font-size="18">Produk C</text></svg>
+          </div>
+          <h4>Produk C</h4>
+          <p>Pilihan sehat dengan bahan organik dan rendah gula.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h3>Tentang Sunscream</h3>
+      <p>Sunscream adalah usaha kecil yang fokus pada pembuatan produk makanan berkualitas tinggi. Kami memakai bahan lokal dan resep yang terjaga untuk menghadirkan rasa yang konsisten.</p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h3>Kontak</h3>
+      <p>Ingin memesan atau bertanya? Isi formulir singkat atau kirim email ke <a href="mailto:hello@sunscream.example">hello@sunscream.example</a>.</p>
+
+      <form id="contactForm" action="#" onsubmit="return false;" novalidate>
+        <label>
+          Nama
+          <input type="text" id="name" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" name="email" required>
+        </label>
+        <label>
+          Pesan
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </label>
+        <button id="sendBtn" class="btn" type="submit">Kirim</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Sunscream — Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
